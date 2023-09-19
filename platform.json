@@ -1,0 +1,220 @@
+[{
+  "users": [
+    {
+      "user_id": 1,
+      "username": "student123",
+      "email": "student@example.com",
+      "enrolled_courses": [101, 102]
+    },
+    {
+      "user_id": 2,
+      "username": "instructor456",
+      "email": "instructor@example.com",
+      "teaching_courses": [201]
+    },
+    {
+        "user_id": 3,
+        "username": "learner789",
+        "email": "learner@example.com",
+        "enrolled_courses": [103]
+    }      
+  ],
+  "courses": [
+    {
+      "course_id": 101,
+      "title": "Introduction to Programming",
+      "price": 49.99,
+      "last_modified": "2023-09-15",
+      "rating": 4.5,
+      "views": 1200,
+      "category": "Computer Science",
+      "modules": [
+        {
+          "module_id": 1,
+          "title": "Getting Started",
+          "lessons": [
+            {
+              "lesson_id": 1,
+              "title": "Welcome to Programming",
+              "exercises": [
+                {
+                  "exercise_id": 1,
+                  "title": "Basic Syntax"
+                },
+                {
+                  "exercise_id": 2,
+                  "title": "Variables and Data Types"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "module_id": 2,
+          "title": "Control Structures",
+          "lessons": [
+            {
+              "lesson_id": 2,
+              "title": "Conditional Statements",
+              "exercises": [
+                {
+                  "exercise_id": 3,
+                  "title": "If Statements"
+                },
+                {
+                  "exercise_id": 4,
+                  "title": "Switch Statements"
+                }
+              ]
+            },
+            {
+              "lesson_id": 3,
+              "title": "Loops",
+              "exercises": [
+                {
+                  "exercise_id": 5,
+                  "title": "For Loops"
+                },
+                {
+                  "exercise_id": 6,
+                  "title": "While Loops"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "course_id": 102,
+      "title": "Introduction to Web Development",
+      "price": 59.99,
+      "last_modified": "2023-09-14",
+      "rating": 4.7,
+      "views": 1500,
+      "category": "Web Development",
+      "modules": [
+        {
+          "module_id": 1,
+          "title": "Frontend Development",
+          "lessons": [
+            {
+              "lesson_id": 1,
+              "title": "HTML Basics",
+              "exercises": [
+                {
+                  "exercise_id": 1,
+                  "title": "Creating a Web Page"
+                },
+                {
+                  "exercise_id": 2,
+                  "title": "HTML Elements"
+                }
+              ]
+            },
+            {
+              "lesson_id": 2,
+              "title": "CSS Styling",
+              "exercises": [
+                {
+                  "exercise_id": 3,
+                  "title": "CSS Selectors"
+                },
+                {
+                  "exercise_id": 4,
+                  "title": "Box Model"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "module_id": 2,
+          "title": "Backend Development",
+          "lessons": [
+            {
+              "lesson_id": 3,
+              "title": "Introduction to Servers",
+              "exercises": [
+                {
+                  "exercise_id": 5,
+                  "title": "Server Setup"
+                },
+                {
+                  "exercise_id": 6,
+                  "title": "API Development"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+        "course_id": 103,
+        "title": "Data Science Fundamentals",
+        "price": 79.99,
+        "last_modified": "2023-09-16",
+        "rating": 4.6,
+        "views": 900,
+        "category": "Data Science",
+        "modules": [
+          {
+            "module_id": 1,
+            "title": "Introduction to Data Science",
+            "lessons": [
+              {
+                "lesson_id": 1,
+                "title": "What is Data Science?",
+                "exercises": [
+                  {
+                    "exercise_id": 1,
+                    "title": "Exploring Data"
+                  },
+                  {
+                    "exercise_id": 2,
+                    "title": "Data Visualization"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "module_id": 2,
+            "title": "Data Analysis Techniques",
+            "lessons": [
+              {
+                "lesson_id": 2,
+                "title": "Data Cleaning",
+                "exercises": [
+                  {
+                    "exercise_id": 3,
+                    "title": "Data Preprocessing"
+                  },
+                  {
+                    "exercise_id": 4,
+                    "title": "Handling Missing Data"
+                  }
+                ]
+              },
+              {
+                "lesson_id": 3,
+                "title": "Statistical Analysis",
+                "exercises": [
+                  {
+                    "exercise_id": 5,
+                    "title": "Hypothesis Testing"
+                  },
+                  {
+                    "exercise_id": 6,
+                    "title": "Regression Analysis"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+    }  
+  ]
+}
+]
