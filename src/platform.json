@@ -1,0 +1,950 @@
+[
+  {
+    "users": [
+      {
+        "user_id": 1,
+        "username": "student123",
+        "email": "student@example.com",
+        "enrolled_courses": [101, 102]
+      },
+      {
+        "user_id": 2,
+        "username": "instructor456",
+        "email": "instructor@example.com",
+        "teaching_courses": [201]
+      },
+      {
+        "user_id": 3,
+        "username": "learner789",
+        "email": "learner@example.com",
+        "enrolled_courses": [103]
+      }
+    ],
+    "courses": [
+      {
+        "course_id": 101,
+        "title": "How to start a business",
+        "price": 49.9,
+        "last_modified": "2023-09-15",
+        "rating": 4.5,
+        "views": 1200,
+        "category": "business",
+        "duration": "6 Heures, 25 Minutes" ,
+        "image": "https://i.ibb.co/GTV30vF/pexels-christina-morillo-1181487.jpg",
+        "comments": [
+          {
+            "comment_id": 1,
+            "text": "This is a great comment!",
+            "created_by": "Amal_Maatouh",
+            "likes": 42,
+            "date": "2023-09-19T12:00:00Z"
+          },
+          {
+            "comment_id": 2,
+            "text": "I can relate!",
+            "created_by": "Mouhib_Naffeti",
+            "likes": 12,
+            "date": "2023-10-15T08:30:00Z"
+          },
+          {
+            "comment_id": 3,
+            "text": "Such a great course UwU",
+            "created_by": "Maatouh_Amal007",
+            "likes": 5,
+            "date": "2023-11-05T16:45:00Z"
+          },
+          {
+            "comment_id": 4,
+            "text": "This is a great comment!",
+            "created_by": "Maatouh011",
+            "likes": 3,
+            "date": "2023-12-20T14:15:00Z"
+          }      
+        ],
+        "modules": [
+          {
+            "module_id": 1,
+            "title": "Getting Started",
+            "lessons": [
+              {
+                "lesson_id": 1,
+                "title": "Welcome to Programming"
+              }
+            ],
+            "exercises": [
+              {
+                "exercise_id": 1,
+                "title": "Basic Syntax"
+              },
+              {
+                "exercise_id": 2,
+                "title": "Variables and Data Types"
+              }
+            ]
+          },
+          {
+            "module_id": 2,
+            "title": "Control Structures",
+            "lessons": [
+              {
+                "lesson_id": 2,
+                "title": "Conditional Statements"
+              },
+              {
+                "lesson_id": 3,
+                "title": "Loops"
+              }
+            ],
+            "exercises": [
+              {
+                "exercise_id": 3,
+                "title": "If Statements"
+              },
+              {
+                "exercise_id": 4,
+                "title": "Switch Statements"
+              },
+              {
+                "exercise_id": 5,
+                "title": "For Loops"
+              },
+              {
+                "exercise_id": 6,
+                "title": "While Loops"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "course_id": 102,
+        "title": "HTML Development",
+        "price": 59.7,
+        "last_modified": "2023-09-14",
+        "rating": 3.7,
+        "views": 1500,
+        "category": "developement",
+        "duration": 0 ,
+        "image": "https://i.ibb.co/QNd3vCH/clement-helardot-95-YRwf6-CNw8-unsplash.jpg",
+        "comments": [
+          {
+            "comment_id": 1,
+            "text": "I found this very informative!",
+            "created_by": "EmilySmith123",
+            "likes": 25,
+            "date": "2023-09-21T10:30:00Z"
+          },
+          {
+            "comment_id": 2,
+            "text": "Great job on this content!",
+            "created_by": "JohnDoe87",
+            "likes": 18,
+            "date": "2023-10-02T16:20:00Z"
+          },
+          {
+            "comment_id": 3,
+            "text": "I couldn't agree more!",
+            "created_by": "SarahJohnson789",
+            "likes": 8,
+            "date": "2023-11-10T09:45:00Z"
+          },
+          {
+            "comment_id": 4,
+            "text": "This course exceeded my expectations!",
+            "created_by": "DavidBrown2023",
+            "likes": 15,
+            "date": "2023-12-05T13:55:00Z"
+          }
+        ],        
+        "modules": [
+          {
+            "module_id": 1,
+            "title": "Frontend Development",
+            "lessons": [
+              {
+                "lesson_id": 1,
+                "title": "HTML Basics"
+              },
+              {
+                "lesson_id": 2,
+                "title": "CSS Styling"
+              }
+            ],
+            "exercises": [
+              {
+                "exercise_id": 1,
+                "title": "Creating a Web Page"
+              },
+              {
+                "exercise_id": 2,
+                "title": "HTML Elements"
+              },
+              {
+                "exercise_id": 3,
+                "title": "CSS Selectors"
+              },
+              {
+                "exercise_id": 4,
+                "title": "Box Model"
+              }
+            ]
+          },
+          {
+            "module_id": 2,
+            "title": "Backend Development",
+            "lessons": [
+              {
+                "lesson_id": 3,
+                "title": "Introduction to Servers"
+              }
+            ],
+            "exercises": [
+              {
+                "exercise_id": 5,
+                "title": "Server Setup"
+              },
+              {
+                "exercise_id": 6,
+                "title": "API Development"
+              }
+            ]
+          }
+        ]  
+      },
+      {
+        "course_id": 103,
+        "title": "Data Science Fundamentals",
+        "price": 79.2,
+        "last_modified": "2023-09-16",
+        "rating": 4.6,
+        "views": 900,
+        "category": "data science",
+        "duration": "5 heures 35 minutes" ,
+        "image": "https://i.ibb.co/sCRySzK/isaac-smith-6-En-TPv-PPL6-I-unsplash.jpg",
+        "comments": [
+          {
+            "comment_id": 1,
+            "text": "I learned a lot from this!",
+            "created_by": "ElenaGarcia123",
+            "likes": 38,
+            "date": "2023-09-25T15:20:00Z"
+          },
+          {
+            "comment_id": 2,
+            "text": "Fantastic content, thanks!",
+            "created_by": "AlexJohnson456",
+            "likes": 19,
+            "date": "2023-10-18T11:10:00Z"
+          },
+          {
+            "comment_id": 3,
+            "text": "This course changed my life!",
+            "created_by": "SophieMartin789",
+            "likes": 27,
+            "date": "2023-11-10T18:30:00Z"
+          },
+          {
+            "comment_id": 4,
+            "text": "Incredible insights here!",
+            "created_by": "DavidSmith2023",
+            "likes": 14,
+            "date": "2023-12-24T09:45:00Z"
+          }
+        ],        
+        "modules": [
+          {
+            "module_id": 1,
+            "title": "Introduction to Data Science",
+            "lessons": [
+              {
+                "lesson_id": 1,
+                "title": "What is Data Science?"
+              }
+            ],
+            "exercises": [
+              {
+                "exercise_id": 1,
+                "title": "Exploring Data"
+              },
+              {
+                "exercise_id": 2,
+                "title": "Data Visualization"
+              }
+            ]
+          },
+          {
+            "module_id": 2,
+            "title": "Data Analysis Techniques",
+            "lessons": [
+              {
+                "lesson_id": 2,
+                "title": "Data Cleaning"
+              },
+              {
+                "lesson_id": 3,
+                "title": "Statistical Analysis"
+              }
+            ],
+            "exercises": [
+              {
+                "exercise_id": 3,
+                "title": "Data Preprocessing"
+              },
+              {
+                "exercise_id": 4,
+                "title": "Handling Missing Data"
+              },
+              {
+                "exercise_id": 5,
+                "title": "Hypothesis Testing"
+              },
+              {
+                "exercise_id": 6,
+                "title": "Regression Analysis"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "course_id": 104,
+        "title": "UI/UX Design",
+        "price": 0,
+        "last_modified": "2023-09-16",
+        "rating": 4.6,
+        "views": 900,
+        "category": "design",
+        "duration": "3 heures 35 minutes" ,
+        "image": "https://i.ibb.co/fXDZxpc/faizur-rehman-yap-BRd-PWxik-unsplash.jpg",
+        "comments": [
+          {
+            "comment_id": 1,
+            "text": "I found this incredibly helpful!",
+            "created_by": "SophiaWilliams",
+            "likes": 28,
+            "date": "2023-09-22T14:45:00Z"
+          },
+          {
+            "comment_id": 2,
+            "text": "This content is a game-changer!",
+            "created_by": "JamesJohnson",
+            "likes": 15,
+            "date": "2023-10-19T09:20:00Z"
+          },
+          {
+            "comment_id": 3,
+            "text": "I wish I had taken this course earlier!",
+            "created_by": "OliviaBrown",
+            "likes": 10,
+            "date": "2023-11-12T17:30:00Z"
+          },
+          {
+            "comment_id": 4,
+            "text": "Thanks for the insightful content!",
+            "created_by": "MichaelSmith",
+            "likes": 7,
+            "date": "2023-12-25T12:00:00Z"
+          }
+        ],        
+        "modules": [
+          {
+            "module_id": 1,
+            "title": "Introduction to Data Science",
+            "lessons": [
+              {
+                "lesson_id": 1,
+                "title": "What is Data Science?"
+              }
+            ],
+            "exercises": [
+              {
+                "exercise_id": 1,
+                "title": "Exploring Data"
+              },
+              {
+                "exercise_id": 2,
+                "title": "Data Visualization"
+              }
+            ]
+          },
+          {
+            "module_id": 2,
+            "title": "Data Analysis Techniques",
+            "lessons": [
+              {
+                "lesson_id": 2,
+                "title": "Data Cleaning"
+              },
+              {
+                "lesson_id": 3,
+                "title": "Statistical Analysis"
+              }
+            ],
+            "exercises": [
+              {
+                "exercise_id": 3,
+                "title": "Data Preprocessing"
+              },
+              {
+                "exercise_id": 4,
+                "title": "Handling Missing Data"
+              },
+              {
+                "exercise_id": 5,
+                "title": "Hypothesis Testing"
+              },
+              {
+                "exercise_id": 6,
+                "title": "Regression Analysis"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "course_id": 105,
+        "title": "Cyber security full course",
+        "price": 0,
+        "last_modified": "2023-09-17",
+        "rating": 4.8,
+        "views": 1300,
+        "category": "cyber security",
+        "duration": "2 heures 35 minutes" ,
+        "image": "https://i.ibb.co/zNL0Lhj/pexels-tima-miroshnichenko-5380664.jpg",
+        "comments": [
+          {
+            "comment_id": 1,
+            "text": "I found this incredibly informative!",
+            "created_by": "EmilyJohnson123",
+            "likes": 30,
+            "date": "2023-09-21T15:45:00Z"
+          },
+          {
+            "comment_id": 2,
+            "text": "Kudos to the creators of this course!",
+            "created_by": "DavidBrown456",
+            "likes": 17,
+            "date": "2023-10-18T11:50:00Z"
+          },
+          {
+            "comment_id": 3,
+            "text": "This course has broadened my horizons!",
+            "created_by": "SophiaDavis789",
+            "likes": 9,
+            "date": "2023-11-10T19:15:00Z"
+          },
+          {
+            "comment_id": 4,
+            "text": "I'm impressed by the depth of content!",
+            "created_by": "DanielSmith2023",
+            "likes": 6,
+            "date": "2023-12-25T10:30:00Z"
+          }
+        ],        
+        "modules": [
+          {
+            "module_id": 1,
+            "title": "Introduction to Data Science",
+            "lessons": [
+              {
+                "lesson_id": 1,
+                "title": "What is Data Science?"
+              }
+            ],
+            "exercises": [
+              {
+                "exercise_id": 1,
+                "title": "Exploring Data"
+              },
+              {
+                "exercise_id": 2,
+                "title": "Data Visualization"
+              }
+            ]
+          },
+          {
+            "module_id": 2,
+            "title": "Data Analysis Techniques",
+            "lessons": [
+              {
+                "lesson_id": 2,
+                "title": "Data Cleaning"
+              },
+              {
+                "lesson_id": 3,
+                "title": "Statistical Analysis"
+              }
+            ],
+            "exercises": [
+              {
+                "exercise_id": 1,
+                "title": "Exploring Data"
+              },
+              {
+                "exercise_id": 2,
+                "title": "Data Visualization"
+              },
+              {
+                "exercise_id": 5,
+                "title": "Hypothesis Testing"
+              },
+              {
+                "exercise_id": 6,
+                "title": "Regression Analysis"
+              },
+              {
+                "exercise_id": 3,
+                "title": "Data Preprocessing"
+              },
+              {
+                "exercise_id": 4,
+                "title": "Handling Missing Data"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "course_id": 107,
+        "title": "Python Programming Basics",
+        "price": 0,
+        "last_modified": "2023-09-18",
+        "rating": 4.7,
+        "views": 1200,
+        "category": "developement",
+        "duration": "2 hours",
+        "image": "https://i.ibb.co/RPKpVbp/chris-ried-ieic5-Tq8-YMk-unsplash.jpg",
+        "comments": [
+          {
+            "comment_id": 1,
+            "text": "This course is a treasure trove of knowledge!",
+            "created_by": "IsabellaAdams123",
+            "likes": 22,
+            "date": "2024-01-05T14:30:00Z"
+          },
+          {
+            "comment_id": 2,
+            "text": "I'm recommending this to all my friends!",
+            "created_by": "WilliamBrown456",
+            "likes": 13,
+            "date": "2024-02-10T09:20:00Z"
+          },
+          {
+            "comment_id": 3,
+            "text": "Mind-blowing insights in every module!",
+            "created_by": "EmmaGarcia789",
+            "likes": 8,
+            "date": "2024-03-15T16:45:00Z"
+          },
+          {
+            "comment_id": 4,
+            "text": "This is the best investment in my education!",
+            "created_by": "JamesJohnson2024",
+            "likes": 11,
+            "date": "2024-04-20T14:15:00Z"
+          }
+        ],        
+        "modules": [
+          {
+            "module_id": 1,
+            "title": "Getting Started with Python",
+            "lessons": [
+              {
+                "lesson_id": 1,
+                "title": "Python Syntax"
+              }
+            ],
+            "exercises": [
+              {
+                "exercise_id": 1,
+                "title": "Variables and Data Types"
+              },
+              {
+                "exercise_id": 2,
+                "title": "Conditional Statements"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "course_id": 106,
+        "title": "Machine Learning Fundamentals",
+        "price": 0,
+        "last_modified": "2023-09-18",
+        "rating": 4.9,
+        "views": 1500,
+        "category": "data science",
+        "duration": "3 hours 10 minutes",
+        "image": "https://i.ibb.co/0QDCCJr/man-using-tablet-work-connect-with-others.jpg",
+        "comments": [
+          {
+            "comment_id": 1,
+            "text": "I'm so grateful for this resource!",
+            "created_by": "SophieBrown2024",
+            "likes": 19,
+            "date": "2024-05-10T10:30:00Z"
+          },
+          {
+            "comment_id": 2,
+            "text": "This course is a game-changer for my career!",
+            "created_by": "BenjaminSmith123",
+            "likes": 15,
+            "date": "2024-06-15T12:20:00Z"
+          },
+          {
+            "comment_id": 3,
+            "text": "Absolutely worth every minute!",
+            "created_by": "OliviaWilliams456",
+            "likes": 8,
+            "date": "2024-07-20T18:30:00Z"
+          },
+          {
+            "comment_id": 4,
+            "text": "I can't believe how much I've learned!",
+            "created_by": "DanielBrown2024",
+            "likes": 12,
+            "date": "2024-08-25T09:45:00Z"
+          }
+        ],        
+        "modules": [
+          {
+            "module_id": 1,
+            "title": "Introduction to Machine Learning",
+            "lessons": [
+              {
+                "lesson_id": 1,
+                "title": "What is Machine Learning?"
+              }
+            ],
+            "exercises": [
+              {
+                "exercise_id": 1,
+                "title": "Types of Machine Learning"
+              },
+              {
+                "exercise_id": 2,
+                "title": "Supervised Learning"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "course_id": 108,
+        "title": "Web Development Fundamentals",
+        "price": 0,
+        "last_modified": "2023-09-19",
+        "rating": 4.6,
+        "views": 1100,
+        "category": "developement",
+        "duration": "4 hours 45 minutes",
+        "image": "https://i.ibb.co/w47dygJ/mohammad-rahmani-o-Xl-Xu2quk-GE-unsplash.jpg",
+        "comments": [
+          {
+            "comment_id": 1,
+            "text": "This course is a hidden gem!",
+            "created_by": "EllaDavis2024",
+            "likes": 25,
+            "date": "2024-09-10T14:10:00Z"
+          },
+          {
+            "comment_id": 2,
+            "text": "I wish I had discovered this earlier!",
+            "created_by": "LiamGarcia123",
+            "likes": 18,
+            "date": "2024-10-05T11:30:00Z"
+          },
+          {
+            "comment_id": 3,
+            "text": "The knowledge gained here is priceless!",
+            "created_by": "AvaJohnson456",
+            "likes": 14,
+            "date": "2024-11-15T17:20:00Z"
+          },
+          {
+            "comment_id": 4,
+            "text": "I'm excited to apply what I've learned!",
+            "created_by": "NoahSmith2024",
+            "likes": 10,
+            "date": "2024-12-20T08:45:00Z"
+          }
+        ],        
+        "modules": [
+          {
+            "module_id": 1,
+            "title": "Introduction to Web Development",
+            "lessons": [
+              {
+                "lesson_id": 1,
+                "title": "What is Web Development?"
+              }
+            ],
+            "exercises": [
+              {
+                "exercise_id": 1,
+                "title": "HTML Basics"
+              },
+              {
+                "exercise_id": 2,
+                "title": "CSS Styling"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "course_id": 109,
+        "title": "Introduction to Artificial Intelligence",
+        "price": 0,
+        "last_modified": "2023-09-20",
+        "rating": 4.9,
+        "views": 1600,
+        "category": "data science",
+        "duration": "3 hours 30 minutes",
+        "image": "https://i.ibb.co/dsTnLVQ/4905827.jpg",
+        "comments": [
+          {
+            "comment_id": 1,
+            "text": "I'm impressed by the quality of this content!",
+            "created_by": "SophiaMartin2024",
+            "likes": 32,
+            "date": "2025-01-10T14:55:00Z"
+          },
+          {
+            "comment_id": 2,
+            "text": "This course is a game-changer!",
+            "created_by": "JamesWilson123",
+            "likes": 22,
+            "date": "2025-02-15T09:40:00Z"
+          },
+          {
+            "comment_id": 3,
+            "text": "I've recommended this to all my colleagues!",
+            "created_by": "IsabellaBrown456",
+            "likes": 19,
+            "date": "2025-03-20T16:30:00Z"
+          },
+          {
+            "comment_id": 4,
+            "text": "The insights here are invaluable!",
+            "created_by": "BenjaminDavis2025",
+            "likes": 27,
+            "date": "2025-04-25T13:15:00Z"
+          }
+        ],        
+        "modules": [
+          {
+            "module_id": 1,
+            "title": "Overview of AI",
+            "lessons": [
+              {
+                "lesson_id": 1,
+                "title": "What is Artificial Intelligence?"
+              }
+            ],
+            "exercises": [
+              {
+                "exercise_id": 1,
+                "title": "History of AI"
+              },
+              {
+                "exercise_id": 2,
+                "title": "AI Applications"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "course_id": 110,
+        "title": "JavaScript for Intermediates",
+        "price": 0,
+        "last_modified": "2023-09-21",
+        "rating": 4.5,
+        "views": 900,
+        "category": "developement",
+        "duration": "2 hours 15 minutes",
+        "image": "https://i.ibb.co/44pgHzK/ferenc-almasi-EJSa-En-Vv-Zcg-unsplash.jpg",
+        "comments": [
+          {
+            "comment_id": 1,
+            "text": "I can't believe how much I've learned!",
+            "created_by": "EllaSmith2025",
+            "likes": 36,
+            "date": "2025-05-10T11:45:00Z"
+          },
+          {
+            "comment_id": 2,
+            "text": "This course is a must for anyone interested!",
+            "created_by": "LiamJohnson2025",
+            "likes": 21,
+            "date": "2025-06-15T08:20:00Z"
+          },
+          {
+            "comment_id": 3,
+            "text": "I'm excited to apply these skills in my work!",
+            "created_by": "AvaGarcia2025",
+            "likes": 17,
+            "date": "2025-07-20T15:10:00Z"
+          },
+          {
+            "comment_id": 4,
+            "text": "Such a valuable resource for lifelong learning!",
+            "created_by": "NoahDavis2025",
+            "likes": 14,
+            "date": "2025-08-25T12:30:00Z"
+          }
+        ],        
+        "modules": [
+          {
+            "module_id": 1,
+            "title": "Getting Started with JavaScript",
+            "lessons": [
+              {
+                "lesson_id": 1,
+                "title": "JavaScript Basics"
+              }
+            ],
+            "exercises": [
+              {
+                "exercise_id": 1,
+                "title": "Variables and Functions"
+              },
+              {
+                "exercise_id": 2,
+                "title": "Control Flow"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "course_id": 110,
+        "title": "JavaScript for Beginners",
+        "price": 0,
+        "last_modified": "2023-09-21",
+        "rating": 4.5,
+        "views": 900,
+        "category": "developement",
+        "duration": "2 hours 15 minutes",
+        "image": "https://i.ibb.co/44pgHzK/ferenc-almasi-EJSa-En-Vv-Zcg-unsplash.jpg",
+        "comments": [
+          {
+            "comment_id": 1,
+            "text": "This course exceeded my expectations!",
+            "created_by": "SophiaBrown2025",
+            "likes": 28,
+            "date": "2025-09-10T14:15:00Z"
+          },
+          {
+            "comment_id": 2,
+            "text": "I've gained so much knowledge from this!",
+            "created_by": "JamesMartin2025",
+            "likes": 19,
+            "date": "2025-10-05T09:50:00Z"
+          },
+          {
+            "comment_id": 3,
+            "text": "Highly recommended to all learners!",
+            "created_by": "IsabellaJohnson2025",
+            "likes": 25,
+            "date": "2025-11-15T16:55:00Z"
+          },
+          {
+            "comment_id": 4,
+            "text": "The instructors are experts in their field!",
+            "created_by": "BenjaminSmith2025",
+            "likes": 22,
+            "date": "2025-12-20T13:40:00Z"
+          }
+        ],        
+        "modules": [
+          {
+            "module_id": 1,
+            "title": "Getting Started with JavaScript",
+            "lessons": [
+              {
+                "lesson_id": 1,
+                "title": "JavaScript Basics"
+              }
+            ],
+            "exercises": [
+              {
+                "exercise_id": 1,
+                "title": "Variables and Functions"
+              },
+              {
+                "exercise_id": 2,
+                "title": "Control Flow"
+              }
+            ]
+          }
+        ]
+      },  
+      {
+        "course_id": 111,
+        "title": "Digital Marketing Essentials",
+        "price": 0,
+        "last_modified": "2023-09-22",
+        "rating": 4.8,
+        "views": 1400,
+        "category": "Marketing",
+        "duration": "2 hours 50 minutes",
+        "image": "https://i.ibb.co/hHnXKTc/lauren-mancke-a-OC7-TSLb1o8-unsplash.jpg",
+        "comments": [
+          {
+            "comment_id": 1,
+            "text": "I'm amazed at the depth of knowledge provided!",
+            "created_by": "EllaJohnson2026",
+            "likes": 31,
+            "date": "2026-01-10T11:20:00Z"
+          },
+          {
+            "comment_id": 2,
+            "text": "This course is a valuable investment in my future!",
+            "created_by": "LiamSmith2026",
+            "likes": 27,
+            "date": "2026-02-15T08:10:00Z"
+          },
+          {
+            "comment_id": 3,
+            "text": "I'm grateful for the opportunity to learn from experts!",
+            "created_by": "AvaDavis2026",
+            "likes": 18,
+            "date": "2026-03-20T15:50:00Z"
+          },
+          {
+            "comment_id": 4,
+            "text": "This course has broadened my horizons!",
+            "created_by": "NoahJohnson2026",
+            "likes": 24,
+            "date": "2026-04-25T12:25:00Z"
+          }
+        ],        
+        "modules": [
+          {
+            "module_id": 1,
+            "title": "Introduction to Digital Marketing",
+            "lessons": [
+              {
+                "lesson_id": 1,
+                "title": "Digital Marketing Overview"
+              }
+            ],
+            "exercises": [
+              {
+                "exercise_id": 1,
+                "title": "Online Marketing Channels"
+              },
+              {
+                "exercise_id": 2,
+                "title": "Target Audience"
+              }
+            ]
+          }
+        ]
+      }                                  
+    ]      
+  }
+]

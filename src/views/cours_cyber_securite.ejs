@@ -1,0 +1,155 @@
+<%- include('./partials/header') %>
+
+
+<section >
+<div class="bg-image d-flex justify-content-center align-items-center" style="width: 100%;height: 800px; background-image:url('https://i.ibb.co/7VQjyhN/3d-internet-secuirty-badge.jpg);">
+  <div class="mask" style="background-color: rgba(97, 207, 172, 0.6);">
+    <div class="d-flex justify-content-center align-items-center h-100">
+          <h1 class="fade-hidden text-white mb-0"style=" font-size:100px; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight: bold;">Cyber Sécurité</h1>
+        </div>
+      </div>
+
+</div>
+</section>
+
+
+
+<div class="container " style="margin-top: 100px;">
+            <div class="d-flex" style="gap: 8px; transform: translateX(20px);">
+                <h3 style="font-weight: bold;color: #023434;">Choisir un filtre</h3>
+                <i class="fas fa-filter" style="color: #023434; transform: translateY(8px);"></i>
+            </div>
+            <ul class="ks-cboxtags" style="gap:20px">
+              <li><input type="checkbox" id="checkboxOne" value="Gratuits"><label for="checkboxOne">Gratuits</label></li>
+              <li><input type="checkbox" id="checkboxTwo" value="Payants"><label for="checkboxTwo">Payants</label></li>
+              <li><input type="checkbox" id="checkboxThree" value="notes" ><label for="checkboxThree">Les mieux notés</label></li>
+              <li><input type="checkbox" id="checkboxFour" value="new"><label for="checkboxFour">Les nouveautés </label></li>
+              <li><input type="checkbox" id="checkboxFive" value="view"><label for="checkboxFive">Les plus visités</label></li>
+              
+            </ul>
+          
+</div>
+
+          
+<section style="margin-top: 100px;">
+<div class="container" style="transform: translateX(30px);">
+    <div class="row" id="dataContainer" style="margin-top: 100px;">
+        <script>
+            // Your JSON data
+            let coursesData = <%- JSON.stringify(courses) %>;
+    
+            function filterCourses() {
+              const checkboxes = document.querySelectorAll('.ks-cboxtags input[type="checkbox"]');
+              const selectedFilters = Array.from(checkboxes).filter((checkbox) => checkbox.checked).map((checkbox) => checkbox.value);
+    
+              const filteredCourses = coursesData.filter((course) => {
+                if (selectedFilters.includes("Gratuits") && course.price > 0) {
+                  return false;
+                }
+                if (selectedFilters.includes("Payants") && course.price === 0) {
+                  return false;
+                }
+                if (selectedFilters.includes("notes") && course.rating < 4) {
+                  return false;
+                }
+                if (selectedFilters.includes("new") && course.last_modified != "2023-09-15") {
+                  return false;
+                }
+                if (selectedFilters.includes("view") && course.views < 1000) {
+                  return false;
+                }
+                return true;
+              });
+              let filteredCoursesHTML = '';
+    
+              filteredCourses.forEach((course) => {
+                const courseObject = {
+                  title: course.title,
+                  price: course.price,
+                  rating: course.rating,
+                  date: course.last_modified,
+                  views: course.views,
+                  duration: course.duration, 
+                  image: course.image
+                } 
+                filteredCoursesHTML += `
+                  <div class="col-lg-4 mt-4">
+                    <div class="card shadow-5-strong hover-card" style="max-width: 23rem;">
+                      <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                        <img src="${courseObject.image}" alt="programming-background-collage" class="img-fluid" />
+                        <a href="#!">
+                          <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                        </a>
+                      </div>
+                      <div class="card-body">
+                        <p style="color: #727677;font-size: small;">${courseObject.date}</p>
+                        <h5 class="card-title font-weight-bold" style="font-size: larger;"><a>${courseObject.title}</a></h5>
+                        <ul class="list-unstyled list-inline mb-0">
+                          <li class="list-inline-item me-0">
+                            <i class="fas fa-star text-warning fa-xs"> </i>
+                          </li>
+                          <li class="list-inline-item me-0">
+                            <i class="fas fa-star text-warning fa-xs"></i>
+                          </li>
+                          <li class="list-inline-item me-0">
+                            <i class="fas fa-star text-warning fa-xs"></i>
+                          </li>
+                          <li class="list-inline-item me-0">
+                            <i class="fas fa-star text-warning fa-xs"></i>
+                          </li>
+                          <li class="list-inline-item">
+                            <i class="fas fa-star-half-alt text-warning fa-xs"></i>
+                          </li>
+                          <li class="list-inline-item">
+                            <p class="text-muted">${courseObject.rating}</p>
+                          </li>
+                        </ul>
+                        <div class="d-flex inline-item">
+                          <i class="far fa-clock"></i><p style="font-size: small; margin-left: 10px;">  ${courseObject.duration}</p>   
+                        </div>
+                        <div class="d-flex inline-item">
+                          <i class="far fa-user"></i><p style="font-size: small; margin-left: 10px;">${courseObject.views} vues</p>   
+                        </div>
+                        ${courseObject.price > 0 ? `<div class="d-flex">
+                          <p style="color: red;font-weight: bold;font-size:large;">$ ${courseObject.price}</p>
+                          <button class="btn" style="background-color:#023434;margin-left: 160px;color:rgb(255, 255, 255);">Acheter</button>
+                        </div>` : `<span class="badge badge-success" style="margin-left: 200px;font-size: larger; margin-top: 10px;">GRATUIT</span>` }
+                      </div>
+                    </div>
+                  </div>
+                `;
+              });
+    
+              dataContainer.innerHTML = filteredCoursesHTML;
+            }
+    
+            const checkboxes = document.querySelectorAll('.ks-cboxtags input[type="checkbox"]');
+            checkboxes.forEach((checkbox) => {
+              checkbox.addEventListener('change', filterCourses);
+            });
+    
+            filterCourses();
+          </script>
+</div>
+
+
+
+  </div>
+</section>
+<nav aria-label="Page navigation example" style="margin-top: 100px;">
+  <ul class="pagination justify-content-center d-flex">
+    <li class="page-item">
+      <a class="page-link">Précédent</a>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#">Suivant</a>
+    </li>
+  </ul>
+</nav>
+
+
+
+<%- include ('./partials/footer') %>
