@@ -1,0 +1,445 @@
+<%- include('./partials/header') %>
+
+
+  <!-- Sidebar -->
+
+<div class="container-fluid" id="dataContainer" style="margin-top: 80px;">
+  <script>
+    function ReturnCourse (){
+      const courseId = localStorage.getItem('courseId');
+      console.log(courseId)
+      const coursesFetched = <%- JSON.stringify(courses) %>;
+      let CourseContent = ''
+      const dataContainer = document.getElementById("dataContainer")
+      let courseToShow
+      coursesFetched.forEach((course)=>{
+         if(course.course_id == courseId){
+          courseToShow = course
+         }
+      });
+      if (courseToShow){
+        modules = courseToShow.modules
+        CourseContent += `
+        <div class="row flex-nowrap">
+            <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 " style="background-color:rgb(50, 210, 181);">
+                <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+                    <a href="/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                        <span class="fs-5 d-none d-sm-inline">Menu</span>
+                    </a>
+                    <!-- Collapse 1 --> `
+          for(let i = 0; i<modules.length; i++){
+            let module = modules[i]
+            CourseContent += 
+            `<a class="list-group-item list-group-item-action py-2 ripple" aria-current="true"
+            data-mdb-toggle="collapse" href="#collapseExample1" aria-expanded="true"
+            aria-controls="collapseExample1">
+            <i class="fas fa-tachometer-alt fa-fw me-3"></i><span>${module.title}</span>
+          </a>`
+          let lessons = module.lessons
+          let exercices = module.exercises
+          CourseContent += `<!-- Collapsed content -->
+          <ul id="collapseExample1" class="collapse show">`
+          if(lessons){
+            for(let j = 0; j< lessons.length; j++){
+            let lesson = lessons[j]
+            CourseContent += `
+            <li class="list-group-item py-1">
+              <a href="" class="text-reset">${lesson.title}</a>
+            </li>`
+          }
+          CourseContent += `<li class="list-group-item py-1">
+              <a href="" class="text-reset">Exercices</a>
+              <ul>`
+
+            for(let u = 0; u<exercices.length; u++){
+              let exercice = exercices[u]
+              CourseContent += `
+                <a href="" class="text-reset">${exercice.title}</a>
+              `
+            }
+            CourseContent += `</ul>
+            </li>
+          </ul>`
+          }        
+        }
+          let comments = courseToShow.comments
+          console.log(comments)    
+          CourseContent += `
+          <!-- Collapse 3 -->
+                    <hr>
+                    <div class="dropdown pb-4 ">
+                        <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="https://i.ibb.co/brXj56P/avatar-removebg-preview.png"  alt="hugenerd" width="50" height="40" class="rounded-circle">
+                            <span class="d-none d-sm-inline mx-1">Amal Maatoug</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-light text-small shadow" aria-labelledby="dropdownUser1">
+                            <li><a class="dropdown-item" href="/profil_etudiant">Profil</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Se déconnecter</a></li>
+                        </ul>
+                      
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col py-3" >
+              <section id="section-1">
+                <h3>${courseToShow.title}</h3>
+                <p>
+                  Le domaine du machine learning est fascinant, résultant de la
+                  convergence de diverses disciplines telles que les
+                  statistiques, l'optimisation, l'algorithmique et le traitement
+                  du signal. En constante évolution, il s'est désormais
+                  fermement intégré dans notre société. Pendant des décennies,
+                  il a été utilisé dans des applications telles que la
+                  reconnaissance automatique de caractères et les filtres
+                  anti-spam.<p> Aujourd'hui, ses utilisations s'étendent à la
+                  protection contre la fraude bancaire, les recommandations
+                  personnalisées de livres, de films et d'autres produits, la
+                  reconnaissance faciale dans nos appareils photo et la
+                  traduction automatique de textes entre différentes langues.</p>
+                  <p>Dans les années à venir, le machine learning promet d'avoir un
+                  impact encore plus significatif sur divers domaines. Il
+                  devrait contribuer à améliorer la sécurité routière grâce à
+                  l'avènement des véhicules autonomes, à renforcer la réponse
+                  d'urgence face aux catastrophes naturelles, à accélérer le
+                  développement de nouveaux médicaments, et à accroître
+                  l'efficacité énergétique de nos bâtiments et industries.
+                </p>
+
+              </section>
+
+
+                <div class="callout-block callout-block-info">
+                  <div class="content">
+                    <h4 class="callout-title">
+                      <span class="callout-icon-holder me-1">
+                        <i class="fas fa-info-circle"></i> </span
+                      ><!--//icon-holder-->
+                      Note
+                    </h4>
+                    <p>
+            Dans le cas d’un programme informatique, qui est celui qui nous intéresse dans cet ouvrage, on parle
+            d’apprentissage automatique, ou machine learning, quand ce programme a la capacité d’apprendre sans que
+            cette modification ne soit explicitement programmée.  On peut ainsi opposer un programme classique, qui utilise une procédure et les données qu’il reçoit
+            en entrée pour produire en sortie des réponses, à un programme d’apprentissage automatique, qui utilise
+            les données et les réponses afin de produire la procédure qui permet d’obtenir les secondes à partir des
+            premières.
+                    
+                    </p>
+                  </div>
+                  <!--//content-->
+                </div>
+
+                
+                <div class="callout-block callout-block-success">
+                  <div class="content">
+                    <h4 class="callout-title">
+                      <span class="callout-icon-holder me-1">
+                        <i class="fas fa-thumbs-up"></i> </span
+                      ><!--//icon-holder-->
+                      Exemple
+                    </h4>
+                    <p>
+                      Supposons qu’une entreprise veuille connaître le montant total dépensé par un client ou une cliente
+    à partir de ses factures. Il suffit d’appliquer un algorithme classique, à savoir une simple addition : un
+    algorithme d’apprentissage n’est pas nécessaire.
+    <p>Supposons maintenant que l’on veuille utiliser ces factures pour déterminer quels produits le client est
+    le plus susceptible d’acheter dans un mois. Bien que cela soit vraisemblablement lié, nous n’avons manifestement pas toutes les informations nécessaires pour ce faire. Cependant, si nous disposons de l’historique
+    d’achat d’un grand nombre d’individus, il devient possible d’utiliser un algorithme de machine learning
+    pour qu’il en tire un modèle prédictif nous permettant d’apporter une réponse à notre question.</p>
+                    </p>
+                  </div>
+                  <!--//content-->
+                </div>
+                <!--//callout-block-->
+
+
+              </div>
+
+
+
+        </div>
+        `
+          
+      }
+      dataContainer.innerHTML = CourseContent;
+    }
+    ReturnCourse()
+  </script>
+
+</div>
+
+
+<!-- Sidebar -->
+
+
+
+<div class="container my-5">
+  <div class="row d-flex justify-content-center">
+    <div  style="width: 1000px;">
+      <div class="card shadow-1-strong">
+        <div class="card-body">
+          <h3 class="justify-content-center align-self-center" style="color: rgb(50, 210, 181);">
+            Consultez cette liste de vidéos pour une meilleure compréhension
+           <i class="far fa-face-grin-beam"></i></h3>
+        </div></div></div></div></div>
+
+<div class="container1">
+
+
+  <div class="main-video-container">
+     <video src="https://mdbcdn.b-cdn.net/img/video/forest.mp4" type="video/mp4" style="width:100%;height: 100%;" loop controls class="main-video"></video>
+     <h3 class="main-vid-title">Introduction au machine learning</h3>
+  </div>
+
+  <div class="video-list-container">
+    <h4>1/8 vidéos</h4>
+    <h5 style="color: gray;">1h 50 min</h5>
+
+     <div class="list active">
+        <video src="https://mdbcdn.b-cdn.net/img/video/forest.mp4" type="video/mp4"  class="list-video"></video>
+        <h3 class="list-title">les types de machine learning</h3>
+     </div>
+
+     <div class="list">
+        <video src="https://mdbcdn.b-cdn.net/img/video/forest.mp4" type="video/mp4"  class="list-video"></video>
+        <h3 class="list-title">les domaines de machine learning</h3>
+     </div>
+
+     <div class="list">
+        <video src="https://mdbcdn.b-cdn.net/img/video/forest.mp4" type="video/mp4"  class="list-video"></video>
+        <h3 class="list-title">emoji falling animation</h3>
+     </div>
+
+     <div class="list">
+        <video src="https://mdbcdn.b-cdn.net/img/video/forest.mp4" type="video/mp4"  class="list-video"></video>
+        <h3 class="list-title">3D town animation</h3>
+     </div>
+
+ 
+     <div class="list">
+      <video src="https://mdbcdn.b-cdn.net/img/video/forest.mp4" type="video/mp4"  class="list-video"></video>
+      <h3 class="list-title">emoji falling animation</h3>
+   </div>
+
+   <div class="list">
+      <video src="https://mdbcdn.b-cdn.net/img/video/forest.mp4" type="video/mp4"  class="list-video"></video>
+      <h3 class="list-title">3D town animation</h3>
+   </div>
+
+   <div class="list">
+    <video src="https://mdbcdn.b-cdn.net/img/video/forest.mp4" type="video/mp4"  class="list-video"></video>
+    <h3 class="list-title">emoji falling animation</h3>
+ </div>
+
+ <div class="list">
+    <video src="https://mdbcdn.b-cdn.net/img/video/forest.mp4" type="video/mp4"  class="list-video"></video>
+    <h3 class="list-title">3D town animation</h3>
+ </div>
+
+
+  </div>
+
+</div>
+<script>
+const videoList = document.querySelectorAll('.video-list-container .list');
+
+  videoList.forEach(vid => {
+     vid.addEventListener('click', function() {
+        videoList.forEach(remove => {
+           remove.classList.remove('active');
+        });
+        
+        this.classList.add('active');
+        let src = this.querySelector('.list-video').src;
+        let title = this.querySelector('.list-title').innerHTML;
+        document.querySelector('.main-video-container .main-video').src = src;
+        document.querySelector('.main-video-container .main-video').play();
+        document.querySelector('.main-video-container .main-vid-title').innerHTML = title;
+     });
+  });
+  </script>
+
+
+
+  <section class="my-5">
+    <div class="container my-5 py-5">
+  
+          <div class="card text-dark">
+            <div class="card-body p-4">
+              <h4 class="mb-9" >Commentaires récentes</h4>  
+              <div class="d-flex flex-start">
+                <img class="rounded-circle shadow-1-strong me-3"
+                  src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(23).webp" alt="avatar" width="60"
+                  height="60" />
+                <div>
+                  <h6 class="fw-bold mb-1">Amal Maatoug</h6>
+                  <div class="d-flex align-items-center mb-3">
+                    <p class="mb-0">
+                      5 septembre 2020
+                    </p>
+                   
+                  </div>
+                  <div class="small-ratings d-flex" >
+                    <i class="fa fa-star rating-color" ></i>
+                    <i class="fa fa-star rating-color"></i>
+                    <i class="fa fa-star rating-color"></i>
+                    <i class="fa fa-star" style="color: antiquewhite;"></i>
+                    <i class="fa fa-star"  style="color: antiquewhite;"></i>
+                </div>
+                  <p class="mb-0">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting
+                    industry. Lorem Ipsum has been the industry's standard dummy text ever
+                    since the 1500s, when an unknown printer took a galley of type and
+                    scrambled it.
+                  </p>
+                </div>
+              </div>
+            </div>
+  
+            <hr class="my-0" />
+  
+            <div class="card-body p-4">
+              <div class="d-flex flex-start">
+                <img class="rounded-circle shadow-1-strong me-3"
+                  src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(26).webp" alt="avatar" width="60"
+                  height="60" />
+                <div>
+                  <h6 class="fw-bold mb-1">Med ali</h6>
+                  <div class="d-flex align-items-center mb-3">
+                    <p class="mb-0">
+                      5 septembre 2020
+                    </p>
+                
+                  </div>
+                  <div class="small-ratings d-flex" >
+                    <i class="fa fa-star rating-color" ></i>
+                    <i class="fa fa-star rating-color"></i>
+                    <i class="fa fa-star rating-color"></i>
+                    <i class="fa fa-star" style="color: antiquewhite;"></i>
+                    <i class="fa fa-star"  style="color: antiquewhite;"></i>
+                </div>
+                  <p class="mb-0">
+                    Contrary to popular belief, Lorem Ipsum is not simply random text. It
+                    has roots in a piece of classical Latin literature from 45 BC, making it
+                    over 2000 years old. Richard McClintock, a Latin professor at
+                    Hampden-Sydney College in Virginia, looked up one of the more obscure
+                    Latin words, consectetur, from a Lorem Ipsum passage, and going through
+                    the cites.
+                  </p>
+                </div>
+              </div>
+            </div>
+  
+            <hr class="my-0" style="height: 1px;" />
+  
+            <div class="card-body p-4">
+              <div class="d-flex flex-start">
+                <img class="rounded-circle shadow-1-strong me-3"
+                  src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(33).webp" alt="avatar" width="60"
+                  height="60" />
+                <div>
+                  <h6 class="fw-bold mb-1">Amelie dark</h6>
+                  <div class="d-flex align-items-center mb-3">
+                    <p class="mb-0">
+                      5 septembre 2020
+                
+                    </p>
+                  
+                  </div>
+                  <div class="small-ratings d-flex" >
+                    <i class="fa fa-star rating-color" ></i>
+                    <i class="fa fa-star rating-color"></i>
+                    <i class="fa fa-star rating-color"></i>
+                    <i class="fa fa-star" style="color: antiquewhite;"></i>
+                    <i class="fa fa-star"  style="color: antiquewhite;"></i>
+                </div>
+                  <p class="mb-0">
+                    There are many variations of passages of Lorem Ipsum available, but the
+                    majority have suffered alteration in some form, by injected humour, or
+                    randomised words which don't look even slightly believable. If you are
+                    going to use a passage of Lorem Ipsum, you need to be sure.
+                  </p>
+                </div>
+              </div>
+            </div>
+  
+            <hr class="my-0" />
+  
+            <div class="card-body p-4">
+              <div class="d-flex flex-start">
+                <img class="rounded-circle shadow-1-strong me-3"
+                  src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(24).webp" alt="avatar" width="60"
+                  height="60" />
+                <div>
+                  <h6 class="fw-bold mb-1">Bernard thomas</h6>
+                  <div class="d-flex align-items-center mb-3">
+                    <p class="mb-0">
+                      5 septembre 2020
+                    </p>
+                
+                  </div>
+                  <div class="small-ratings d-flex" >
+                    <i class="fa fa-star rating-color" ></i>
+                    <i class="fa fa-star rating-color"></i>
+                    <i class="fa fa-star rating-color"></i>
+                    <i class="fa fa-star" style="color: antiquewhite;"></i>
+                    <i class="fa fa-star"  style="color: antiquewhite;"></i>
+                </div>
+                  <p class="mb-0">
+                    It uses a dictionary of over 200 Latin words, combined with a handful of
+                    model sentence structures, to generate Lorem Ipsum which looks
+                    reasonable. The generated Lorem Ipsum is therefore always free from
+                    repetition, injected humour, or non-characteristic words etc.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+ 
+   
+ 
+
+
+
+    <div class="container my-5 py-5 text-dark">
+      <div class="row d-flex justify-content-center">
+        <div class="col-md-10 col-lg-8 col-xl-6">
+          <div class="card">
+            <div class="card-body p-4">
+              <div class="d-flex flex-start w-100">
+                <img class="rounded-circle shadow-1-strong me-3"
+                  src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(21).webp" alt="avatar" width="65"
+                  height="65" />
+                <div class="w-100">
+                  <h5>Ajouter un commentaire</h5>
+                  <div class="rating"> <input type="radio" name="rating" value="5" id="5"><label for="5">☆</label> <input type="radio" name="rating" value="4" id="4"><label for="4">☆</label> <input type="radio" name="rating" value="3" id="3"><label for="3">☆</label> <input type="radio" name="rating" value="2" id="2"><label for="2">☆</label> <input type="radio" name="rating" value="1" id="1"><label for="1">☆</label>
+                  </div>
+                  <div class="form-outline">
+                    <textarea class="form-control" id="textAreaExample" rows="4"></textarea>
+                    <label class="form-label" for="textAreaExample">Ecrire votre commentaire</label>
+                  </div>
+                  <div class="d-flex justify-content-between mt-3">
+                    <button type="button" class="btn" style="background-color: #2ceded;">
+                      Envoyer <i class="fas fa-long-arrow-alt-right ms-1"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+  </section>
+
+
+
+<%- include('./partials/footer') %>

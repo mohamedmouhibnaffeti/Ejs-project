@@ -43,7 +43,7 @@ app.get('/cours/tous', (req, res) => {
         }
         const PlatformData = JSON.parse(jsonString);
         const courses = PlatformData[0].courses;
-        res.render('cours', courses);
+        res.render('cours', { courses });
     });
 });
 app.get('/cours/dev', (req, res) => {
@@ -124,9 +124,23 @@ app.get('/cours/cyber_securite', (req, res) => {
         res.render('cours_cyber_securite', { courses: filteredCourses });
     });
 });
+app.get('/', (req, res) => res.render('home'));
 app.get('/contact', (req, res) => res.render('contact'));
-app.get('/login', (req, res) => res.render('login'));
-app.get('/register', (req, res) => res.render('register'));
+app.get('/profil_etudiant', (req, res) => res.render('profil_etudiant'));
+app.get('/cours_achetes', (req, res) => res.render('cours_achetes'));
+app.get('/cours_visites', (req, res) => res.render('cours_visites'));
+app.get('/examplecourspage', (req, res) => {
+    fs_1.default.readFile("./src/platform.json", "utf8", (err, jsonString) => {
+        if (err) {
+            // tslint:disable-next-line:no-console
+            console.log("File read failed:", err);
+            return;
+        }
+        const PlatformData = JSON.parse(jsonString);
+        const courses = PlatformData[0].courses;
+        res.render('examplecourspage', { courses });
+    });
+});
 const PORT = process.env.SERVER_PORT;
 app.listen(PORT, () => {
     // tslint:disable-next-line:no-console

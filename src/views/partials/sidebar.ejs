@@ -1,0 +1,148 @@
+  <!-- Navbar -->
+  <nav id="main-navbar" class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+    <!-- Container wrapper -->
+    <div class="container-fluid">
+      <!-- Toggle button -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-mdb-toggle="collapse"
+        data-mdb-target="#sidebarMenu"
+        aria-controls="sidebarMenu"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <a class="navbar-brand " href="/">
+        <img src="https://i.ibb.co/Wtc9H7m/logo-1-removebg-preview-removebg-preview.png" alt="logo-1-removebg-preview-removebg-preview" alt="logo"  style="width:250px; height: 30px;">
+          </a>
+      <!-- Search -->
+      <div class="input-group" style="width: 280px;" >
+        <div class="form-outline">
+          <input id="search-focus" type="search" id="form1" class="form-control" />
+          <label class="form-label" for="form1">Rechercher</label>
+        </div>
+        <button type="button" class="btn" style="background: lightseagreen 75%;">
+          <i class="fas fa-search fa-xl"></i>
+        </button>
+      </div>
+
+      <!-- Right links -->
+      <ul class="navbar-nav  d-flex flex-row">
+        <!-- Notification dropdown -->
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link  dropdown-toggle hidden-arrow"
+            href="#"
+            id="navbarDropdownMenuLink"
+            role="button"
+            data-mdb-toggle="dropdown"
+            aria-expanded="false"
+            style="margin-top: 16px;"
+            
+          >
+            <i class="fas fa-bell fa-xl" style="color: #2ceded;"></i>
+            <span class="badge rounded-pill badge-notification bg-danger">2</span>
+          </a>
+          <ul
+            class="dropdown-menu dropdown-menu-end"
+            aria-labelledby="navbarDropdownMenuLink"
+          >
+            <li>
+              <a class="dropdown-item" href="#">Une nouvelle</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">Autre</a>
+            </li>
+          </ul>
+        </li>
+
+   
+
+
+        <!-- Avatar -->
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle hidden-arrow d-flex align-items-center"
+            href="#"
+            id="navbarDropdownMenuLink"
+            role="button"
+            data-mdb-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <img
+              src="https://i.ibb.co/brXj56P/avatar-removebg-preview.png" 
+              class="rounded-circle"
+              height="30"
+              width="30"
+              alt="Avatar"
+              loading="lazy"
+            />
+          </a>
+          <ul
+            class="dropdown-menu dropdown-menu-end"
+            aria-labelledby="navbarDropdownMenuLink"
+          >
+            <li>
+              <a class="dropdown-item" href="/profil_etudiant">Profil</a>
+            </li>
+            <li>
+              <a class="dropdown-item" id="myeditmodal" >Modifier profil</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">Se déconnecter</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!-- Container wrapper -->
+  </nav>
+
+
+  <!-- Sidebar -->
+  <div id="sidebarMenu" class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 fixed" style="background-color:rgb(50, 210, 181);">
+    <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+       
+
+
+<a href="/" class="list-group-item list-group-item-action py-2 ripple" aria-current="true" aria-expanded="true" style="margin-top: 40px; font-size: 20px;">
+    <i class="fas fa-house" ></i><span style="margin-left: 10px;">Accueil</span>
+</a>
+
+
+<a href="/profil_etudiant" class="list-group-item list-group-item-action py-2 ripple" aria-current="true" aria-expanded="true" style="margin-top: 40px; font-size: 20px;">
+<i class="far fa-address-card"></i><span style="margin-left: 10px;">Profil</span>
+</a>
+
+
+<a class="list-group-item list-group-item-action py-2 ripple" aria-current="true" aria-expanded="true"   data-mdb-toggle="collapse" href="#collapseExample1" aria-expanded="true"
+aria-controls="collapseExample1" style="margin-top: 40px; font-size: 20px;">
+    <i class="fas fa-laptop"></i><span style="margin-left: 10px;">Cours</span>
+</a>
+<ul id="collapseExample1" class="collapse show">
+  <li class="list-group-item py-1" style="margin-top: 6px;">
+    <a href="/cours_achetes" class="text-reset" style="font-size: 15px;"><i class="fas fa-cart-shopping"></i>
+      <span style="margin-left: 10px;">Cours achetés</span>
+    </a>
+  </li>
+  <li class="list-group-item py-1" style="margin-top: 9px;">
+    <a href="/cours_visites" class="text-reset" style="font-size: 15px;"><i class="fas fa-eye"></i>
+      <span style="margin-left: 10px;">Cours visités</span>
+    </a>
+  </li>
+</ul>
+
+<a href="" class="list-group-item list-group-item-action py-2 ripple" aria-current="true" aria-expanded="true" style="margin-top: 40px; font-size: 20px;">
+<i class="fas fa-thumbs-up"></i><span  style="margin-left: 10px;">Intéractions</span>
+</a>
+
+<a href=""  class="list-group-item list-group-item-action py-2 ripple" aria-current="true" aria-expanded="true" style="margin-top: 40px; font-size: 20px;">
+<i class="fas fa-chart-pie"></i><span  style="margin-left: 10px;">Statistiques</span>
+</a>
+
+
+</div>
+</div>   

@@ -1,0 +1,63 @@
+<!--MODAL FOR PAYMENT CARD-->
+<div class="modal "  id="myModal" >
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">PAYEMENT</h5>
+          <button type="button" class="btn-close" id="closeModalBtn" data-mdb-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row justify-content-center radio-group">
+            <div class="col-lg-4 ">
+                <div class='radio mx-auto selected' data-value="dk"> <img class="fit-image" src="https://i.ibb.co/PGYYM0s/carte-e-dinar-jeune.jpg" style="width: 150px;height: 90px;"> </div>
+            </div>
+            <div class="col-lg-4">
+                <div class='radio mx-auto' data-value="master"> <img class="fit-image" src="https://i.ibb.co/rsrRMjn/Mastercard-Logo-1996.png"style="width: 150px;height: 90px;" > </div>
+            </div>
+            <div class="col-lg-4 ">
+                <div class='radio mx-auto' data-value="paypal"> <img class="fit-image" src="https://i.ibb.co/TRb4HSK/Paypal-Servise.jpg" style="width: 150px;height: 90px;"> </div>
+            </div> <br>
+        </div>
+  
+        <div class="row mb-4">
+          <div class="col">
+            <div class="form-outline">
+              <input type="text" id="form3Example1" class="form-control" />
+              <label class="form-label" for="form3Example1">Nom</label>
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-outline">
+              <input type="text" id="form3Example2" class="form-control" />
+              <label class="form-label" for="form3Example2">Prénom</label>
+            </div>
+          </div>
+        </div>
+         <!-- date exp input -->
+         <div class="form-outline mb-4">
+          <input type="text" id="form3Example3" class="form-control" placeholder="0000 0000 0000 0000" minlength="19" maxlength="19" />
+          <label class="form-label" for="form3Example3">Num carte</label>
+        </div>
+      
+        <!-- date exp input -->
+        <div class="form-outline mb-4">
+          <input type="text" id="form3Example3" class="form-control" placeholder="MM/YY" minlength="5" maxlength="5" />
+          <label class="form-label" for="form3Example3">Date d'expiration</label>
+        </div>
+      
+        <!-- code input -->
+        <div class="form-outline mb-4">
+          <input type="password" id="form3Example4" placeholder="&#9679;&#9679;&#9679;" minlength="3" maxlength="3" class="form-control" />
+          <label class="form-label" for="form3Example4" >Code</label>
+        </div>
+  
+  
+        <br>
+        <div class="row justify-content-center">
+            <div class="col-md"> <input type="submit" value="Payer" class="btn pay placeicon"> </div>
+        </div>
+        </div>
+      </div>
+      </div>
+</div>
+  
